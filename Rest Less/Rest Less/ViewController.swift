@@ -9,20 +9,40 @@
 
 import UIKit
 
+func secondsToDisplay(var time: NSTimeInterval) -> String{
+    
+    let minutes = UInt8(time / 60.0)
+    time -= (NSTimeInterval(minutes) * 60)
+
+    let seconds = UInt8(time)
+    time -= NSTimeInterval(seconds)
+
+    let fraction = UInt8(time * 100)
+    
+    let strMinutes = minutes > 9 ? String(minutes):"0" + String(minutes)
+    let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+    let strFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+
+    return "\(strMinutes):\(strSeconds):\(strFraction)"
+}
+
 class ViewController: UIViewController {
     
     
     @IBOutlet weak var displayTimeLabel: UILabel!
     
     var startTime = NSTimeInterval()
-    var restTime = NSDate(timeIntervalSinceNow: 90)
-    
+    var restTime:NSTimeInterval = 90
+    var restTimeDate: NSDate!
     var timer = NSTimer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        displayTimeLabel.text = "02:00:00"
+        
+        displayTimeLabel.text = secondsToDisplay(restTime)
+        
+        restTimeDate = NSDate(timeIntervalSinceNow: restTime)
     }
     
     @IBAction func startTimer(sender: AnyObject) {
@@ -31,7 +51,6 @@ class ViewController: UIViewController {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = NSDate.timeIntervalSinceReferenceDate()
-            restTime = NSDate(timeIntervalSinceNow:90)
 
         }
     }
@@ -43,48 +62,20 @@ class ViewController: UIViewController {
     @IBAction func resetTimer(sender: AnyObject) {
         timer.invalidate()
         
-        displayTimeLabel.text = "00:00:00"
-        
-        
+        displayTimeLabel.text = secondsToDisplay(restTime)
     }
     
     
     func updateTime() {
         
-        
-//        var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        //        var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        
-        //Find the difference between current time and start time.
-        var elapsedTime: NSTimeInterval = restTime.timeIntervalSinceNow
-        
-        //calculate the minutes in elapsed time.
-        let minutes = UInt8(elapsedTime / 60.0)
-        elapsedTime -= (NSTimeInterval(minutes) * 60)
-        
-        //calculate the seconds in elapsed time.
-        let seconds = UInt8(elapsedTime)
-        elapsedTime -= NSTimeInterval(seconds)
-        
-        //find out the fraction of milliseconds to be displayed.
-        let fraction = UInt8(elapsedTime * 100)
-        
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
-        
-        println(seconds)
-        let strMinutes = minutes > 9 ? String(minutes):"0" + String(minutes)
-        let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
-        let strFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
-        println(strFraction)
-        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        displayTimeLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        var elapsedTime: NSTimeInterval = restTimeDate.timeIntervalSinceNow
+
+        displayTimeLabel.text = secondsToDisplay(elapsedTime)
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
