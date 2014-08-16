@@ -1,7 +1,7 @@
 import Foundation
 import XCPlayground
 
-let urlString = "http://www.reddit.com/.json"
+let urlString = "http://secret-stream-5880.herokuapp.com/test_api_call"
 let url = NSURL.URLWithString(urlString)
 let request = NSURLRequest(URL: url)
 let queue = NSOperationQueue()
