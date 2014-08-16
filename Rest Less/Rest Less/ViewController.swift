@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayTimeLabel: UILabel!
     
     var startTime = NSTimeInterval()
-    
+    var restTime = NSDate(timeIntervalSinceNow: 90)
     
     var timer = NSTimer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayTimeLabel.text = "00:02:00"
+//        displayTimeLabel.text = "02:00:00"
     }
     
     @IBAction func startTimer(sender: AnyObject) {
@@ -31,8 +31,8 @@ class ViewController: UIViewController {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = NSDate.timeIntervalSinceReferenceDate()
-            //            startTime = NSDate.timeIntervalSinceReferenceDate()
-            
+            restTime = NSDate(timeIntervalSinceNow:90)
+
         }
     }
     
@@ -43,7 +43,8 @@ class ViewController: UIViewController {
     @IBAction func resetTimer(sender: AnyObject) {
         timer.invalidate()
         
-        displayTimeLabel.text = "00:02:00"
+        displayTimeLabel.text = "00:00:00"
+        
         
     }
     
@@ -51,12 +52,12 @@ class ViewController: UIViewController {
     func updateTime() {
         
         
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+//        var currentTime = NSDate.timeIntervalSinceReferenceDate()
         //        var currentTime = NSDate.timeIntervalSinceReferenceDate()
         
         
         //Find the difference between current time and start time.
-        var elapsedTime: NSTimeInterval = currentTime - startTime
+        var elapsedTime: NSTimeInterval = restTime.timeIntervalSinceNow
         
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
