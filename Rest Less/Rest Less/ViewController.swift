@@ -23,9 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayTimeLabel.text = "00:02:00"
-        
-        
-        
     }
     
     @IBAction func startTimer(sender: AnyObject) {
