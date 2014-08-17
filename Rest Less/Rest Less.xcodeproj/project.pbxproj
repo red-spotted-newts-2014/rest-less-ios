@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B88DEFDD19A07DA4008AA6FC /* SecondsToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */; };
 		EA29ABC819A0125B00539D98 /* HttpPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29ABC719A0125B00539D98 /* HttpPost.swift */; };
 		EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */; };
 		EACBDF9A199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF98199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondsToDisplay.swift; sourceTree = "<group>"; };
 		EA29ABC719A0125B00539D98 /* HttpPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPost.swift; sourceTree = "<group>"; };
 		EACBDF91199E8D0C00BDDC11 /* Rest Less.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest Less.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACBDF95199E8D0D00BDDC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */,
 				EACBDF9B199E8D0D00BDDC11 /* ViewController.swift */,
+				B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */,
 				EACBDF9D199E8D0D00BDDC11 /* Main.storyboard */,
 				EA29ABC719A0125B00539D98 /* HttpPost.swift */,
 				EACBDFA0199E8D0D00BDDC11 /* Images.xcassets */,
@@ -217,6 +220,7 @@
 				EACBDF9C199E8D0D00BDDC11 /* ViewController.swift in Sources */,
 				EACBDF9A199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld in Sources */,
 				EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */,
+				B88DEFDD19A07DA4008AA6FC /* SecondsToDisplay.swift in Sources */,
 				EA29ABC819A0125B00539D98 /* HttpPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
