@@ -1,7 +1,12 @@
+//
+//  HttpPost.swift
+//  Rest Less
+//
+//  Created by Dylan Krause on 8/16/14.
+//  Copyright (c) 2014 newts. All rights reserved.
+//
+
 import Foundation
-import XCPlayground
-
-
 func HTTPostJSON(url: String,
     jsonObj: AnyObject)
 {
@@ -26,14 +31,8 @@ func HTTPostJSON(url: String,
             println(jsonRError!.localizedDescription)
         }
         else {
-            json_response
+            println(json_response)
         }
     })
     subTask.resume()
 }
-
-var params = ["workout_type":"weights"] as Dictionary
-
-HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
-
-XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)

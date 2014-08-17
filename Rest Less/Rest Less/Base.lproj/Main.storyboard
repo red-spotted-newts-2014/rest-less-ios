@@ -50,10 +50,23 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+<<<<<<< HEAD
                             <pickerView contentMode="scaleToFill" id="dcP-G3-p99">
                                 <rect key="frame" x="25" y="177" width="115" height="134"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Gt-XT-1ZF">
+                                <rect key="frame" x="136" y="269" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c0Y-Fy-eCt"/>
+                                </connections>
+                            </button>
+>>>>>>> 626d5a40d7320e62df37e69e61b0432a74eddb2a
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
