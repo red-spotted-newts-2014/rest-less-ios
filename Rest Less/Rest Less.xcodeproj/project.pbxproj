@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095D99CA19A04A7C0041A9DD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D99C919A04A7C0041A9DD /* SecondViewController.swift */; };
 		B88DEFDD19A07DA4008AA6FC /* SecondsToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */; };
 		EA29ABC819A0125B00539D98 /* HttpPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29ABC719A0125B00539D98 /* HttpPost.swift */; };
 		EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondsToDisplay.swift; sourceTree = "<group>"; };
 		EA29ABC719A0125B00539D98 /* HttpPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPost.swift; sourceTree = "<group>"; };
+		095D99C919A04A7C0041A9DD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		EACBDF91199E8D0C00BDDC11 /* Rest Less.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest Less.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACBDF95199E8D0D00BDDC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */,
+				095D99C919A04A7C0041A9DD /* SecondViewController.swift */,
 				EACBDF9B199E8D0D00BDDC11 /* ViewController.swift */,
 				B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */,
 				EACBDF9D199E8D0D00BDDC11 /* Main.storyboard */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095D99CA19A04A7C0041A9DD /* SecondViewController.swift in Sources */,
 				EACBDF9C199E8D0D00BDDC11 /* ViewController.swift in Sources */,
 				EACBDF9A199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld in Sources */,
 				EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */,
