@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         displayTimeLabel.text = secondsToDisplay(elapsedTime)
     }
     
+    @IBOutlet var exercises: [UIPickerView]!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
