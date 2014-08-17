@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sendData(sender: AnyObject) {
-        var params = ["workout_type":"weights"] as Dictionary
+        
         timer.description
         HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
         
