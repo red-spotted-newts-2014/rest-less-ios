@@ -7,35 +7,39 @@ class WorkoutLogger {
     var userName: String
     var workoutName: String
     var reps = [String]()
-    var times = [Double]()
+    var plannedTimes: [Int]
+    var actualTimes = [Double]()
     var finalTime = Double()
     var missedReps: Int {
         get {
             
-            return reps.count - times.count
+            return reps.count - actualTimes.count
         }
     }
    
-    init(userName:String, workoutName:String) {
+    init(userName:String, workoutName:String, plannedTimes:[Int]) {
         self.userName = userName
         self.workoutName = workoutName
+        self.plannedTimes = plannedTimes
     }
     
     func addRestTime(val:Double) -> Double {
-        self.times.append(val)
-        return self.times.last!
+        self.actualTimes.append(val)
+        return self.actualTimes.last!
     
     }
     func returnDictInfo() ->  [String:String]{
     
        return ["userName": self.userName,
               "workoutName": self.workoutName,
-              "times": "\(self.times)",
+              "times": "\(self.actualTimes)",
               "finalTime" : "\(self.finalTime)",
               "missedReps" : "\(self.missedReps)"]
     }
 
 }
+
+
 
 
 
