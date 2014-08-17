@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F3C34E98-314B-4F7E-8310-42F85C3A58B5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Rest Less</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>796C0A85BE57D93D4F6A1F2284F912E39624D094</key>
+		<string>https://github.com/aedwards12/rest-less-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Rest Less/Rest Less.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>796C0A85BE57D93D4F6A1F2284F912E39624D094</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aedwards12/rest-less-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>796C0A85BE57D93D4F6A1F2284F912E39624D094</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>796C0A85BE57D93D4F6A1F2284F912E39624D094</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rest-less-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
