@@ -9,8 +9,8 @@
 
 import UIKit
 
-func secondsToDisplay(var time: NSTimeInterval) -> String{
-    
+func secondsToDisplay(let seconds: NSTimeInterval) -> String{
+    var time : NSTimeInterval = seconds
     let minutes = UInt8(time / 60.0)
     time -= (NSTimeInterval(minutes) * 60)
 
@@ -51,12 +51,14 @@ class ViewController: UIViewController {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = NSDate.timeIntervalSinceReferenceDate()
-
+            
         }
     }
     
     @IBAction func pauseTimer(sender: AnyObject) {
+         println(timer.timeInterval)
         timer.invalidate()
+        HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", [val])
     }
     
     @IBAction func resetTimer(sender: AnyObject) {
@@ -71,9 +73,9 @@ class ViewController: UIViewController {
         HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
         
     }
-    
+    var val = 0.0
     func updateTime() {
-        
+         val += timer.timeInterval
         var elapsedTime: NSTimeInterval = restTimeDate.timeIntervalSinceNow
 
         displayTimeLabel.text = secondsToDisplay(elapsedTime)
