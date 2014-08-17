@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>58F1D7F8-0116-45AB-B130-9C64B8261787</string>
+	<string>F3C34E98-314B-4F7E-8310-42F85C3A58B5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Rest Less</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>796C0A85BE57D93D4F6A1F2284F912E39624D094</key>
-		<string>https://github.com/krauzer/rest-less-ios.git</string>
+		<string>https://github.com/aedwards12/rest-less-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Rest Less/Rest Less.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/krauzer/rest-less-ios.git</string>
+	<string>https://github.com/aedwards12/rest-less-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
