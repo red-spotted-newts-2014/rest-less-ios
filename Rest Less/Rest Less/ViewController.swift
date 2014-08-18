@@ -26,15 +26,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         displayTimeLabel.text = secondsToDisplay(restTime)
-
+        let aSelector : Selector = "updateTime"
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        restTimeDate = NSDate(timeIntervalSinceNow: restTime - accumulatedTime)
     }
     
     @IBAction func startTimer(sender: AnyObject) {
         if timer.valid != true {
             let aSelector : Selector = "updateTime"
+            
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            
             startTime = NSDate.timeIntervalSinceReferenceDate()
+            
             restTimeDate = NSDate(timeIntervalSinceNow: restTime - accumulatedTime)
+
         }
     }
     
@@ -48,9 +55,11 @@ class ViewController: UIViewController {
         displayTimeLabel.text = secondsToDisplay(restTime)
     }
     
+    
     @IBAction func sendData(sender: AnyObject) {
-        var params = ["workout_type":"weights"] as Dictionary
+        
         timer.description
+        var params = ["stuff" : "stuff"]
         HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
         
     }

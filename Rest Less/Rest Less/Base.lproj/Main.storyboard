@@ -66,9 +66,6 @@
                     <navigationItem key="navigationItem" title="Rest" id="PBU-wr-bFS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Emz-dh-RvT">
                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="IFN-YO-wNQ" kind="push" id="NNv-ix-aVA"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -77,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="353"/>
+            <point key="canvasLocation" x="868" y="345"/>
         </scene>
         <!--active-->
         <scene sceneID="ABB-Ef-ViX">
@@ -87,21 +84,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IV0-s7-7ac">
-                                <rect key="frame" x="137" y="361" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1jH-7k-bdj">
+                                <rect key="frame" x="103" y="333" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Start Workout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startWorkout:" destination="IFN-YO-wNQ" eventType="touchUpInside" id="Zwq-op-Xw9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n8U-xc-060">
+                                <rect key="frame" x="100" y="416" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finished Exercise">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="ITb-CZ-PBh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IV0-s7-7ac">
+                                <rect key="frame" x="103" y="490" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finished Workout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopWorkoutTime:" destination="IFN-YO-wNQ" eventType="touchUpInside" id="oB1-Tg-Cy2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QUb-fw-1lc" appends="YES" id="Tig-10-2cN"/>
+                            <outletCollection property="gestureRecognizers" destination="QUb-fw-1lc" appends="YES" id="Lgc-Nf-Luq"/>
+                            <outletCollection property="gestureRecognizers" destination="QUb-fw-1lc" appends="YES" id="AUw-R1-PCg"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="active" id="eDR-1X-zJs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peT-nl-bPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="QUb-fw-1lc">
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="push" id="jOV-8N-D92"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="645" y="353"/>
+            <point key="canvasLocation" x="473" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nym-yd-vGl">
@@ -114,7 +145,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="9tf-3f-CLY"/>
+                        <segue destination="IFN-YO-wNQ" kind="relationship" relationship="rootViewController" id="1Q8-gq-tcB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JW9-rW-ssE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,4 +161,7 @@
             <size key="landscapeSize" width="568" height="320"/>
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jOV-8N-D92"/>
+    </inferredMetricsTieBreakers>
 </document>
