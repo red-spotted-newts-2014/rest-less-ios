@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, APIGetWorkoutControllerProtocol {
 
     var workoutTimer = NSTimer()
     var accumulatedTime = 0.0
@@ -51,6 +51,22 @@ class SecondViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func getData(sender: AnyObject) {
+        var api = APIGetWorkoutController()
+        var url = "http://secret-stream-5880.herokuapp.com"
+        var workout_id = "1"
+        api.delegate = self
+        api.HTTPGetter(url + "/" + workout_id + ".json")
+    }
+    
+    var response:NSDictionary?
+    
+    func receivedGetResponse(result: NSDictionary) -> NSDictionary {
+        println(result)
+        return result
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

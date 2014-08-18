@@ -27,13 +27,16 @@ class ViewController: UIViewController {
         
         displayTimeLabel.text = secondsToDisplay(restTime)
         let aSelector : Selector = "updateTime"
+
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+
         startTime = NSDate.timeIntervalSinceReferenceDate()
         restTimeDate = NSDate(timeIntervalSinceNow: restTime - accumulatedTime)
     }
     
     @IBAction func startTimer(sender: AnyObject) {
         if timer.valid != true {
+
             let aSelector : Selector = "updateTime"
             
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
@@ -50,20 +53,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetTimer(sender: AnyObject) {
+
         timer.invalidate()
         accumulatedTime = 0.0
         displayTimeLabel.text = secondsToDisplay(restTime)
+
     }
     
-    
-    @IBAction func sendData(sender: AnyObject) {
-        
-        timer.description
-        var params = ["stuff" : "stuff"]
-        HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
-        
-    }
-    
+
     func updateTime() {
         accumulatedTime += timer.timeInterval
         var elapsedTime: NSTimeInterval = restTimeDate.timeIntervalSinceNow
