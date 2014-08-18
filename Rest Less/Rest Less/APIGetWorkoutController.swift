@@ -36,10 +36,10 @@ class APIGetWorkoutController {
             
             var jsonError:NSError?
             
-            var responseDict = NSJSONSerialization.JSONObjectWithData(responseBody, options: nil, error: &jsonError) as NSDictionary
-            println(responseDict)
-            println("\(responseBody)")
-            self.delegate?.receivedGetResponse(responseDict)
+
+            var responseDict = NSJSONSerialization.JSONObjectWithData(responseBody, options: nil, error: &jsonError) as? NSDictionary
+            println(responseDict!)
+            self.delegate?.receivedGetResponse(responseDict!)
             jsonError?
             if jsonError? != nil {
                 println("error")
