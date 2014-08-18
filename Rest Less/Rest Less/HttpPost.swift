@@ -35,4 +35,5 @@ func HTTPostJSON(url: String,
         }
     })
     subTask.resume()
+    println("hello")
 }
