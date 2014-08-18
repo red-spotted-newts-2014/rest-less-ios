@@ -10,10 +10,45 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var workoutTimer = NSTimer()
+    var accumulatedTime = 0.0
+    var startTimeDate: NSDate!
+    @IBOutlet weak var displayWorkoutLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func startWorkout (sender: AnyObject) {
+        if workoutTimer.valid != true {
+        let aSelector : Selector = "sumWorkoutTime"
+        startTimeDate = NSDate(timeIntervalSinceReferenceDate: NSDate.timeIntervalSinceReferenceDate())
+        workoutTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        }
+    }
+    
+    @IBAction func stopWorkoutTime (sender: AnyObject) {
+        workoutTimer.invalidate()
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                println("Swiped right")
+            default:
+                break
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +56,13 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func sumWorkoutTime() {
+        accumulatedTime += workoutTimer.timeInterval
 
+    }
+    
+  
+    
     /*
     // MARK: - Navigation
 
